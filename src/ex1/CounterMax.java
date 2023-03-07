@@ -1,14 +1,37 @@
 package src.ex1;
 
-public class CounterMax extends Counter {
-    public int maxCounter;
+/**
+ * The CounterMax class extends the Counter class and implements the Printable interface to create a counter with
+ * a maximum possible value.
+ */
+public class CounterMax extends Counter implements Printable{
+    private final int maxCounter;
 
-    public CounterMax(int val) {
+    /**
+     * constructor
+     * @param max The maximum possible value of the counter.
+     */
+    public CounterMax(int max) {
         super();
-        maxCounter = val;
+        maxCounter = max;
     }
 
-    public void increment(int amount) {
-        assert getCounter() + amount > maxCounter;
+    /**
+     * print out the information about the counter and his max value
+     */
+    public void print(){
+        System.out.println("Counter value: " + getCounter() + ", Max counter value: " + maxCounter);
+    }
+
+    /**
+     * @param num The value added to the counter
+     *
+     */
+    @Override
+    public void increment(int num) {
+        super.increment(num);
+        if (getCounter() + num > maxCounter) {
+            throw new RuntimeException("Counter value exceeds maximum value");
+        }
     }
 }
