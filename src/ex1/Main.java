@@ -7,14 +7,13 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        Scanner scanner = new Scanner(System.in);
         Counter counter = new Counter();
-        int numOfNums = readNumber(scanner);
+        int numOfNums = readNumber("Please enter the number of numbers you would like to enter");
 
         System.out.println("Please enter " + numOfNums + " values");
 
         for (int i = 0; i < numOfNums; i++) {
-            int num = scanner.nextInt();
+            int num = readNumber("Please enter a positive integer");
             counter.increment(num);
         }
 
@@ -23,13 +22,14 @@ public class Main {
 
     /**
      * Reads user input using a scanner and ensures that only positive integers are accepted.
-     * @param scanner The scanner object used to read user input.
+     * @param msg the message to prompt the user for input
      * @return The positive integer entered by the user.
      */
-    public static int readNumber(Scanner scanner){
+    static int readNumber(String msg) {
+        Scanner scanner = new Scanner(System.in);
         int num;
         do {
-            System.out.print("Please enter a positive integer: ");
+            System.out.print(msg + ": ");
 
             while (!scanner.hasNextInt()) {
                 System.out.println("Error: Input is not a number.");

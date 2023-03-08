@@ -1,5 +1,7 @@
 package src.ex1;
 
+import java.util.Scanner;
+
 /**
  * A class that represents a simple counter with increment functionality.
  */
