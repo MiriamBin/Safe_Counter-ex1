@@ -16,7 +16,6 @@ public class Main {
             int num = readNumber("Please enter a positive integer");
             counter.increment(num);
         }
-
         counter.print();
     }
 
@@ -25,7 +24,7 @@ public class Main {
      * @param msg the message to prompt the user for input
      * @return The positive integer entered by the user.
      */
-    static int readNumber(String msg) {
+   public static int readNumber(String msg) {
         Scanner scanner = new Scanner(System.in);
         int num;
         do {
