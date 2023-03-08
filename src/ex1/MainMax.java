@@ -1,7 +1,6 @@
 package src.ex1;
 import static src.ex1.Main.readNumber;
 
-
 /**
  * The program asks the user for a maximum number and the number of numbers he wishes to enter.
  * The program adds up the numbers until we have reached the number of numbers or until we have
@@ -9,7 +8,6 @@ import static src.ex1.Main.readNumber;
  */
 public class MainMax {
     public static void main(String[] args) {
-
 
         int max = readNumber("Please enter the max value");
         int numOfNums = readNumber("Please enter the number of numbers you would like to enter");
