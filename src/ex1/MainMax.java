@@ -1,5 +1,6 @@
 package src.ex1;
-import static src.ex1.Main.readNumber;
+
+import java.util.Scanner;
 
 /**
  * The program asks the user for a maximum number and the number of numbers he wishes to enter.
@@ -26,8 +27,31 @@ public class MainMax {
                 break;
             }
         }
-
         counter.print();
     }
 
+    /**
+     * Reads user input using a scanner and ensures that only positive integers are accepted.
+     * @param msg the message to prompt the user for input
+     * @return The positive integer entered by the user.
+     */
+    public static int readNumber(String msg) {
+        Scanner scanner = new Scanner(System.in);
+        int num;
+        do {
+            System.out.print(msg + ": ");
+
+            while (!scanner.hasNextInt()) {
+                System.out.println("Error: Input is not a number.");
+                scanner.next();
+            }
+            num = scanner.nextInt();
+
+            if (num <= 0) {
+                System.out.println("Error: Input must be a positive integer.");
+            }
+        } while (num <= 0);
+
+        return num;
+    }
 }
