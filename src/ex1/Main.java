@@ -1,10 +1,15 @@
-package src.ex1;
+package ex1;
 import java.util.Scanner;
 
 /**
- * The program reads numbers from the user, adds them up and prints the sum.
+ * The program asks the user for the number of numbers he wishes to enter.
+ * The program adds up the numbers until we have reached the number of numbers.
  */
 public class Main {
+    /**
+     * * The main method of the program.
+     * @param args not used
+     */
     public static void main(String[] args) {
 
         Counter counter = new Counter();
@@ -25,19 +30,20 @@ public class Main {
      * @return The positive integer entered by the user.
      */
    public static int readNumber(String msg) {
+
         Scanner scanner = new Scanner(System.in);
         int num;
         do {
             System.out.print(msg + ": ");
 
             while (!scanner.hasNextInt()) {
-                System.out.println("Error: Input is not a number.");
+                System.err.println("Error: Input is not a number.");
                 scanner.next();
             }
             num = scanner.nextInt();
 
             if (num <= 0) {
-                System.out.println("Error: Input must be a positive integer.");
+                System.err.println("Error: Input must be a positive integer.");
             }
         } while (num <= 0);
 

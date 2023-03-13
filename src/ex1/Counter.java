@@ -1,11 +1,12 @@
-package src.ex1;
-
-import java.util.Scanner;
+package ex1;
 
 /**
  * A class that represents a simple counter with increment functionality.
  */
 public class Counter implements Printable{
+    /**
+     * The value of the counter.
+     */
     private int counter;
 
     /**
@@ -42,6 +43,10 @@ public class Counter implements Printable{
         return counter;
     }
 
+    /**
+     * override the toString method
+     * @return the counter value as a string
+     */
     @Override
     public String toString() {
         return Integer.toString(counter);

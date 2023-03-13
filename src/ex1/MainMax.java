@@ -1,4 +1,4 @@
-package src.ex1;
+package ex1;
 
 import java.util.Scanner;
 
@@ -8,6 +8,10 @@ import java.util.Scanner;
  * passed the maximum number.
  */
 public class MainMax {
+    /**
+     * * The main method of the program.
+     * @param args not used
+     */
     public static void main(String[] args) {
 
         int max = readNumber("Please enter the max value");
@@ -42,13 +46,13 @@ public class MainMax {
             System.out.print(msg + ": ");
 
             while (!scanner.hasNextInt()) {
-                System.out.println("Error: Input is not a number.");
+                System.err.println("Error: Input is not a number.");
                 scanner.next();
             }
             num = scanner.nextInt();
 
             if (num <= 0) {
-                System.out.println("Error: Input must be a positive integer.");
+                System.err.println("Error: Input must be a positive integer.");
             }
         } while (num <= 0);
 

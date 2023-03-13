@@ -1,1 +1,1 @@
-typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"src.ex1","l":"Counter"},{"p":"src.ex1","l":"CounterMax"},{"p":"<Unnamed>","l":"Main"},{"p":"src.ex1","l":"Main"},{"p":"src.ex1","l":"MainMax"},{"p":"src.ex1","l":"Printable"}];updateSearchResults();
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"ex1","l":"Counter"},{"p":"ex1","l":"CounterMax"},{"p":"ex1","l":"Main"},{"p":"ex1","l":"MainMax"},{"p":"ex1","l":"Printable"}];updateSearchResults();

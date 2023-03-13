@@ -1,10 +1,13 @@
-package src.ex1;
+package ex1;
 
 /**
  * The CounterMax class extends the Counter class and implements the Printable interface to create a counter with
  * a maximum possible value.
  */
 public class CounterMax extends Counter implements Printable{
+    /**
+     * The maximum possible value of the counter.
+     */
     private final int maxCounter;
 
     /**
@@ -25,12 +28,11 @@ public class CounterMax extends Counter implements Printable{
 
     /**
      * @param num The value added to the counter
-     *
      */
     @Override
     public void increment(int num) {
         super.increment(num);
-        if (getCounter() + num > maxCounter) {
+        if (getCounter() > maxCounter) {
             throw new RuntimeException("Counter value exceeds maximum value");
         }
     }

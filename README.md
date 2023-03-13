@@ -7,7 +7,7 @@
 <h5>Email: dennasa@edu.hac.ac.ill</h5>
 
 <h1>Counter Program </h1>
-<a href="doc/index.html">API documentation</a>
+<a href="/ex1-java-neviim-ex1_miriam_binyamines_salomon_demma/doc/ex1/package-summary.html">API documentation</a>
 
 This program contains two classes, Counter and CounterMax, both of which represent a simple counter with increment functionality.
 
