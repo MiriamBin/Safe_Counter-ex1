@@ -30,13 +30,13 @@ num would cause it to exceed its maximum value.<br>
 
 <h3>Main Class</h3>
 The Main class contains a simple program that reads in a specified number of integers from the user and increments a
-Counter object by the sum of those integers. It also contains a readNumber(Scanner scanner) method that reads a positive
-integer from the user using the specified Scanner object.<br>
+Counter object by the sum of those integers. It also contains a readNumber(String msg) method that reads a positive
+integer from the user.<br>
 
 <h3>MainMax Class</h3>
 The MainMax class contains a similar program to Main that uses a CounterMax object instead of a Counter object.
 It reads in a specified number of integers from the user and increments a CounterMax object by the sum of those integers. 
 If incrementing the CounterMax object by an integer would cause it to exceed its maximum value, a RuntimeException is
-thrown and the program stops. It also contains a readNumber(Scanner scanner, String msg) method that reads a positive
+thrown and the program stops. It also contains a readNumber(String msg) method that reads a positive
 integer from the user using the specified Scanner object and a custom message.<br>
 
